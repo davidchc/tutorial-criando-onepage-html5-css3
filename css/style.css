@@ -1,0 +1,68 @@
+body{
+    background: url(../images/background.jpg) no-repeat fixed center top;
+}
+header{
+    width:20%;
+    background:#fff;
+    position: absolute;
+    left:0;
+    top:5%;
+    z-index: 5;
+}
+header h1{
+    text-align: center;
+}
+nav ul{
+    list-style:none;
+    margin:5px 0;
+    padding:0;
+}
+nav a{
+    display:block;
+    border:1px solid #e5e5e5;
+    border-left:0;
+    border-right:0;
+    margin:3px 0;
+    color:#333;
+    padding:5px 0;
+    text-decoration: none;
+} 
+.box{
+    position:absolute;
+    top:5%;
+    right:10px;
+    width:70%;
+    height:70%;
+    background:#fff;
+}
+.box h2{
+    font-size:20px;
+    padding:10px;
+}
+.box p{
+    font-size:12px;
+    padding:10px;
+}
+.content{
+    min-width: 100%;
+    height: 98%;
+    position: absolute;
+    margin-left:-101%;
+    -webkit-transition: margin-left .8s ease-in-out;
+    -moz-transition: margin-left .8s ease-in-out;
+    -o-transition: margin-left .8s ease-in-out;
+    transition: margin-left .8s ease-in-out;
+}
+.content:target{
+    margin-left:0;
+}
+#home{
+    margin-left:0;
+}
+#home:target ~ header #link-home a,
+#company:target ~ header #link-company a,
+#service:target ~ header #link-service a,
+#contact:target ~ header #link-contact a{
+    background: #333;
+    color: #fff;
+}
